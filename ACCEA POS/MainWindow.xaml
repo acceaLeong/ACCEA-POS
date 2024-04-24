@@ -25,28 +25,15 @@
                 <Border Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="15">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
-                            <!--<ColumnDefinition />
-                            <ColumnDefinition />
-                            <ColumnDefinition />-->
+                            <ColumnDefinition 
                         </Grid.ColumnDefinitions>
                         <!-- -->
                         <Grid.RowDefinitions>
                             <RowDefinition />
-                            <!--<RowDefinition Height="12*"/>
-                            <RowDefinition Height="13*" />
-                            <RowDefinition Height="13*" />
-                            <RowDefinition Height="13*" />
-                            <RowDefinition Height="13*" />
-                            <RowDefinition Height="13*" />-->
                         </Grid.RowDefinitions>
                         <!-- -->
                         <Button Grid.Row="0" Grid.Column="0" Background="#fff" Content="Sales" Margin="10"></Button>
-                        <Button Grid.Row="0" Grid.Column="1" Background="#fff" Content="Settings" Margin="10"></Button>
-                        <!--<Button Grid.Column="2" Grid.Row="0" Background="#fff" Content="Product C" Margin="118,0,118,117" Grid.RowSpan="3"></Button>
-                        <Button Grid.Column="3" Grid.Row="0" Background="#fff" Content="Product D" Margin="0,0,0,117" Grid.RowSpan="3"></Button>
-                        <Button Grid.Column="4" Grid.Row="0" Background="#fff" Content="Product E" Margin="118,0,0,117" Grid.RowSpan="3"></Button>-->
+                        <Button Grid.Row="0" Grid.Column="1" Background="#fff" Content="Settings" Margin="10"></Button
                     </Grid>
                 </Border>
             </Grid>
