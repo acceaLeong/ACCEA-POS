@@ -9,219 +9,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-
-        <Border Grid.Column="0" BorderBrush="#000" BorderThickness="1" CornerRadius="3" Margin="10,10,5,10">
-            <Grid >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="30" />
-                    <RowDefinition />
-                    <RowDefinition Height="168" />
-                    <RowDefinition Height="100" />
-                </Grid.RowDefinitions>
-                <!-- -->
-                <Grid Grid.Row="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
-                    <!-- -->
-                    <Border Grid.Column="0" Grid.Row="0" BorderBrush="#000" BorderThickness="0,0,0,1" Padding="10,5">
-                        <TextBlock FontWeight="Bold" VerticalAlignment="Center" Text="Product" />
-                    </Border>
-                    <Border Grid.Column="1" Grid.Row="0" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
-                        <TextBlock FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Qty" />
-                    </Border>
-                    <Border Grid.Column="2" Grid.Row="0" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
-                        <TextBlock FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Unit Price" />
-                    </Border>
-                    <Border Grid.Column="3" Grid.Row="0" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
-                        <TextBlock FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Subtotal" />
-                    </Border>
-                    <Border Grid.Column="4" Grid.Row="0" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
-                        <Image Source="/Resources/Images/xBtn.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="25" />
-                    </Border>
-                </Grid>
-
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
-                    <!-- -->
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="80" />
-                        <RowDefinition Height="80" />
-                    </Grid.RowDefinitions>
-                    <!-- -->
-                    <Border Grid.Column="0" Grid.Row="0" BorderBrush="#000" BorderThickness="0,0,0,1" Padding="10,5">
-                        <StackPanel VerticalAlignment="Center">
-                            <TextBlock Margin="0,0,0,7" Text="Product A" />
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Discount :" Margin="0,0,10,0" VerticalAlignment="Center" />
-                                <TextBox Text="0" MinHeight="30" Width="50" Margin="0,0,10,0" VerticalAlignment="Center"
-                                         HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                                <TextBlock Text="%" VerticalAlignment="Center" />
-                            </StackPanel>
-                        </StackPanel>
-                    </Border>
-                    <Border Grid.Column="1" Grid.Row="0" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
-                        <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Center" MinHeight="40" 
-                                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="2" />
-                    </Border>
-                    <Border Grid.Column="2" Grid.Row="0" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
-                        <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Center" MinHeight="40" 
-                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="22.00" />
-                    </Border>
-                    <Border Grid.Column="3" Grid.Row="0" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="44.00" />
-                    </Border>
-                    <Border Grid.Column="4" Grid.Row="0" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
-                        <Image Source="/Resources/Images/delBtn.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="25" />
-                    </Border>
-                    <!-- -->
-                    <Border Grid.Column="0" Grid.Row="1" BorderBrush="#000" BorderThickness="0,0,0,1" Padding="10,5">
-                        <StackPanel VerticalAlignment="Center">
-                            <TextBlock Margin="0,0,0,7" Text="Product C" />
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Discount :" Margin="0,0,10,0" VerticalAlignment="Center" />
-                                <TextBox Text="5" MinHeight="30" Width="50" Margin="0,0,10,0" VerticalAlignment="Center"
-                                HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                                <TextBlock Text="%" VerticalAlignment="Center" />
-                            </StackPanel>
-                        </StackPanel>
-                    </Border>
-                    <Border Grid.Column="1" Grid.Row="1" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
-                        <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Center" MinHeight="40" 
-                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="1" />
-                    </Border>
-                    <Border Grid.Column="2" Grid.Row="1" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
-                        <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Center" MinHeight="40" 
-                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="43.25" />
-                    </Border>
-                    <Border Grid.Column="3" Grid.Row="1" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="41.08" />
-                    </Border>
-                    <Border Grid.Column="4" Grid.Row="1" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
-                        <Image Source="/Resources/Images/delBtn.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25" Width="25" />
-                    </Border>
-                </Grid>
-
-                <Grid Grid.Row="2" VerticalAlignment="Bottom">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
-                    <!-- -->
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="28" />
-                        <RowDefinition Height="28" />
-                        <RowDefinition Height="28" />
-                        <RowDefinition Height="28" />
-                        <RowDefinition Height="28" />
-                        <RowDefinition Height="28" />
-                    </Grid.RowDefinitions>
-                    <!-- -->
-                    <Border Grid.Column="0" Grid.Row="0" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock VerticalAlignment="Center" Text="Subtotal" />
-                    </Border>
-                    <Border Grid.Column="1" Grid.Row="0" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="5" />
-                    </Border>
-                    <Border Grid.Column="2" Grid.Row="0" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <Border Grid.Column="3" Grid.Row="0" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="85.08" />
-                    </Border>
-                    <Border Grid.Column="4" Grid.Row="0" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <!-- -->
-                    <Border Grid.Column="0" Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock VerticalAlignment="Center" Text="Discount" />
-                    </Border>
-                    <Border Grid.Column="1" Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <Border Grid.Column="2" Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <Border Grid.Column="3" Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="1.00" />
-                    </Border>
-                    <Border Grid.Column="4" Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <!-- -->
-                    <Border Grid.Column="0" Grid.Row="2" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock VerticalAlignment="Center" Text="Rounding Adjustment" />
-                    </Border>
-                    <Border Grid.Column="1" Grid.Row="2" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <Border Grid.Column="2" Grid.Row="2" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <Border Grid.Column="3" Grid.Row="2" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="0.02" />
-                    </Border>
-                    <Border Grid.Column="4" Grid.Row="2" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <!-- -->
-                    <Border Grid.Column="0" Grid.Row="3" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock FontWeight="Bold" VerticalAlignment="Center" Text="Total" />
-                    </Border>
-                    <Border Grid.Column="1" Grid.Row="3" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="5" />
-                    </Border>
-                    <Border Grid.Column="2" Grid.Row="3" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <Border Grid.Column="3" Grid.Row="3" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Center" Text="84.10" />
-                    </Border>
-                    <Border Grid.Column="4" Grid.Row="3" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <!-- -->
-                    <Border Grid.Column="0" Grid.Row="4" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock VerticalAlignment="Center" Text="Amount Received" />
-                    </Border>
-                    <Border Grid.Column="1" Grid.Row="4" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <Border Grid.Column="2" Grid.Row="4" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <Border Grid.Column="3" Grid.Row="4" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="85.00" />
-                    </Border>
-                    <Border Grid.Column="4" Grid.Row="4" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <!-- -->
-                    <Border Grid.Column="0" Grid.Row="5" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock VerticalAlignment="Center" Text="Change" />
-                    </Border>
-                    <Border Grid.Column="1" Grid.Row="5" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <Border Grid.Column="2" Grid.Row="5" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                    <Border Grid.Column="3" Grid.Row="5" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5">
-                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" Text="0.90" />
-                    </Border>
-                    <Border Grid.Column="4" Grid.Row="5" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10,5" />
-                </Grid>
-
-                <Grid Grid.Row="3">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <!-- -->
-                    <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition />
-                    </Grid.RowDefinitions>
-                    <!-- -->
-                    <Button Grid.Column="0" Grid.Row="0" Background="#fff" Padding="10" BorderThickness="0,1,0,1" Content="C" />
-                    <Button Grid.Column="1" Grid.Row="0" Background="#fff" Padding="10" BorderThickness="1,1,0,1" Content="Money Replacement" />
-                    <Button Grid.Column="2" Grid.Row="0" Background="#fff" Padding="10" BorderThickness="1,1,0,1" Content="Overall Discount" />
-                    <Button Grid.Column="3" Grid.Row="0" Background="#fff" Padding="10" BorderThickness="1,1,0,1" Content="Confirm" />
-                    <!-- -->
-                    <Button Grid.Column="0" Grid.Row="1" Background="#fff" Padding="10" BorderThickness="0,0,0,0" Content="Hold" />
-                    <Button Grid.Column="1" Grid.Row="1" Background="#fff" Padding="10" BorderThickness="1,0,0,0" Content="Receipt (Account)" />
-                    <Button Grid.Column="2" Grid.Row="1" Background="#fff" Padding="10" BorderThickness="1,0,0,0" Content="Receipt (Reprint)" />
-                    <Button Grid.Column="3" Grid.Row="1" Background="#fff" Padding="10" BorderThickness="1,0,0,0" Content="Pay" />
-                </Grid>
-            </Grid>
-        </Border>
 
         <Border BorderBrush="#000" BorderThickness="1" CornerRadius="3" Grid.Column="1" Margin="5,10,10,10">
             <Grid>
@@ -231,38 +19,34 @@
                 </Grid.RowDefinitions>
                 <!-- -->
                 <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,0">
-                    <TextBlock FontWeight="Bold" VerticalAlignment="Center" Text="Category > Sub-Category > Sub-Subcategory" />
+                    <TextBlock FontWeight="Bold" VerticalAlignment="Center" Text="Menu" />
                 </StackPanel>
                 <!-- -->
                 <Border Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="15">
-                    <Grid Grid.Row="1">
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
+                            <!--<ColumnDefinition />
                             <ColumnDefinition />
-                            <ColumnDefinition />
-                            <ColumnDefinition />
+                            <ColumnDefinition />-->
                         </Grid.ColumnDefinitions>
                         <!-- -->
                         <Grid.RowDefinitions>
                             <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
+                            <!--<RowDefinition Height="12*"/>
+                            <RowDefinition Height="13*" />
+                            <RowDefinition Height="13*" />
+                            <RowDefinition Height="13*" />
+                            <RowDefinition Height="13*" />
+                            <RowDefinition Height="13*" />-->
                         </Grid.RowDefinitions>
                         <!-- -->
-                        <Button Grid.Column="0" Grid.Row="0" Background="#fff" Content="Product A"></Button>
-                        <Button Grid.Column="1" Grid.Row="0" Background="#fff" Content="Product B"></Button>
-                        <Button Grid.Column="2" Grid.Row="0" Background="#fff" Content="Product C"></Button>
-                        <Button Grid.Column="3" Grid.Row="0" Background="#fff" Content="Product D"></Button>
-                        <Button Grid.Column="4" Grid.Row="0" Background="#fff" Content="Product E"></Button>
-                        <!-- -->
-                        <Button Grid.Column="0" Grid.Row="1" Background="#fff" Content="Product F"></Button>
-                        <Button Grid.Column="1" Grid.Row="1" Background="#fff" Content="Product G"></Button>
-                        <Button Grid.Column="2" Grid.Row="1" Background="#fff" Content="BACK" FontWeight="Bold"></Button>
-                        <Button Grid.Column="3" Grid.Row="1" Background="#fff" Content="RESET" FontWeight="Bold"></Button>
+                        <Button Grid.Row="0" Grid.Column="0" Background="#fff" Content="Sales" Margin="10"></Button>
+                        <Button Grid.Row="0" Grid.Column="1" Background="#fff" Content="Settings" Margin="10"></Button>
+                        <!--<Button Grid.Column="2" Grid.Row="0" Background="#fff" Content="Product C" Margin="118,0,118,117" Grid.RowSpan="3"></Button>
+                        <Button Grid.Column="3" Grid.Row="0" Background="#fff" Content="Product D" Margin="0,0,0,117" Grid.RowSpan="3"></Button>
+                        <Button Grid.Column="4" Grid.Row="0" Background="#fff" Content="Product E" Margin="118,0,0,117" Grid.RowSpan="3"></Button>-->
                     </Grid>
                 </Border>
             </Grid>
