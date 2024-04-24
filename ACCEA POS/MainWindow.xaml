@@ -4,14 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ACCEA_POS"
-        xmlns:l1="clr-namespace:ACCEA_POS.ViewModels"
         mc:Ignorable="d"   
         Title="MainWindow" Height="800" Width="1280">
-    <!--<Window.DataContext>
-        <l1:MainVM />
-    </Window.DataContext>-->
     <Grid>
-        <!--xmlns:resx="clr-namespace:ACCEA_POS.Resources.Languages"-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -36,7 +31,6 @@
                     </Grid.ColumnDefinitions>
                     <!-- -->
                     <Border Grid.Column="0" Grid.Row="0" BorderBrush="#000" BorderThickness="0,0,0,1" Padding="10,5">
-                        <!--<TextBlock FontWeight="Bold" VerticalAlignment="Center" Text="{x:Static resx:lang.product}" />-->
                         <TextBlock FontWeight="Bold" VerticalAlignment="Center" Text="Product" />
                     </Border>
                     <Border Grid.Column="1" Grid.Row="0" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
@@ -85,11 +79,6 @@
                     <Border Grid.Column="2" Grid.Row="0" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
                         <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Center" MinHeight="40" 
                             HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="22.00" />
-                        <!--<ComboBox x:Name="cmbxLang" SelectionChanged="cmbxLang_SelectionChanged" Height="40" />-->
-                        <!--<ComboBox Height="40"
-                            ItemsSource="{Binding AvailableLanguages}"
-                            DisplayMemberPath="DisplayName"
-                            SelectedItem="{Binding SelectedLanguage}" />-->
                     </Border>
                     <Border Grid.Column="3" Grid.Row="0" BorderBrush="#000" BorderThickness="1,0,0,1" Padding="10,5">
                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="44.00" />

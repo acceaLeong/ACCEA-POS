@@ -27,32 +27,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Resources\Languages\lang.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>lang.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Languages\lang.ja.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>lang.ja.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Resources\Images\delBtn.png" />
     <Resource Include="Resources\Images\xBtn.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Languages\lang.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Languages\lang.ja.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>lang.ja.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <Folder Include="Resources\Languages\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 
 </Project>
