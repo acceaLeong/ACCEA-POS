@@ -12,48 +12,197 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Border Grid.Column="0" BorderBrush="#000" BorderThickness="1" CornerRadius="3" Margin="10">
-            <Grid Margin="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                <!-- -->
-                <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <!-- -->
+        <Grid Grid.Column="0" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Border BorderBrush="#000" BorderThickness="1" CornerRadius="3" Grid.Column="1">
+                <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition />
+                        <RowDefinition Height="30" />
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <!-- -->
-                    <Button Grid.Column="0" Grid.Row="0" Background="Gray" Content="C" FontWeight="Bold"></Button>
-                    <Button Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Background="LightGray" Content="DEL" FontWeight="Bold"></Button>
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,0">
+                        <TextBlock FontWeight="Bold" VerticalAlignment="Center" Text="Cash Calculation" />
+                    </StackPanel>
                     <!-- -->
-                    <Button Grid.Column="0" Grid.Row="1" Background="#fff" Content="7"></Button>
-                    <Button Grid.Column="1" Grid.Row="1" Background="#fff" Content="8"></Button>
-                    <Button Grid.Column="2" Grid.Row="1" Background="#fff" Content="9"></Button>
-                    <!-- -->
-                    <Button Grid.Column="0" Grid.Row="2" Background="#fff" Content="4"></Button>
-                    <Button Grid.Column="1" Grid.Row="2" Background="#fff" Content="5"></Button>
-                    <Button Grid.Column="2" Grid.Row="2" Background="#fff" Content="6"></Button>
-                    <!-- -->
-                    <Button Grid.Column="0" Grid.Row="3" Background="#fff" Content="1"></Button>
-                    <Button Grid.Column="1" Grid.Row="3" Background="#fff" Content="2"></Button>
-                    <Button Grid.Column="2" Grid.Row="3" Background="#fff" Content="3"></Button>
-                    <!-- -->
-                    <Button Grid.Column="0" Grid.Row="4" Background="#fff" Content="0"></Button>
-                    <Button Grid.Column="1" Grid.Row="4" Background="#fff" Content="00"></Button>
-                    <Button Grid.Column="2" Grid.Row="4" Background="#fff" Content="."></Button>
+                    <Border Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="5">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+
+                            <Border Grid.Row="0" BorderBrush="#000" BorderThickness="0, 0, 0, 1" Grid.ColumnSpan="2" Margin="0, 0, 0, 10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Grid.ColumnSpan="2"  Text="Denomination" VerticalAlignment="Center" TextWrapping="Wrap"></TextBlock>
+                                    <TextBlock Grid.Column="2" Text="Quantity (PC)" VerticalAlignment="Center" TextWrapping="Wrap"></TextBlock>
+                                    <TextBlock Grid.Column="3" Grid.ColumnSpan="2" Text="Total Amount (RM)" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Right"></TextBlock>
+                                </Grid>
+                            </Border>
+                            <Grid Grid.Row="1" Margin="0, 0, 0, 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="100 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBox>
+                                <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="2" Margin="0, 0, 0, 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="50 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBox>
+                                <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="3" Margin="0, 0, 0, 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="20 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBox>
+                                <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="4" Margin="0, 0, 0, 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="10 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBox>
+                                <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="5" Margin="0, 0, 0, 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="5 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBox>
+                                <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="6" Margin="0, 0, 0, 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="1 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBox>
+                                <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="7" Margin="0, 0, 0, 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="0.5 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBox>
+                                <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="8" Margin="0, 0, 0, 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="0.2 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBox>
+                                <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="9" Margin="0, 0, 0, 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="0.1 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBox>
+                                <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                            </Grid>
+                            <Grid Grid.Row="10" Margin="0, 0, 0, 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="0.05 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBox>
+                                <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
+                            </Grid>
+                        </Grid>
+                    </Border>
                 </Grid>
-            </Grid>
-        </Border>
+            </Border>
+        </Grid>
 
         <Grid Grid.Column="1" Margin="10">
             <Grid.RowDefinitions>
@@ -79,10 +228,6 @@
                         <!-- -->
                         <Border Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="15">
                             <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="23*"/>
-                                    <ColumnDefinition Width="93*"/>
-                                </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition />
                                     <RowDefinition />
@@ -90,7 +235,7 @@
                                     <RowDefinition />
                                 </Grid.RowDefinitions>
                                 <TextBlock VerticalAlignment="Center" FontWeight="Bold" Grid.ColumnSpan="2" TextAlignment="Center">Thursday, 2024/04/24</TextBlock>
-                                <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                                <Grid Grid.Row="1">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition />
                                         <ColumnDefinition />
@@ -101,7 +246,7 @@
                                         <TextBlock Text=" RM" VerticalAlignment="Center"></TextBlock>
                                     </StackPanel>
                                 </Grid>
-                                <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="0,33,0,33" Grid.RowSpan="3">
+                                <Grid Grid.Row="1" Margin="0,33,0,33" Grid.RowSpan="3">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition />
                                         <ColumnDefinition />
