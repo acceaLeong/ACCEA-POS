@@ -10,9 +10,10 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0" Margin="10">
+        <Grid Grid.Column="0" Grid.ColumnSpan="2" Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
@@ -53,9 +54,9 @@
                                         <ColumnDefinition />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Grid.ColumnSpan="2"  Text="Denomination" VerticalAlignment="Center" TextWrapping="Wrap"></TextBlock>
-                                    <TextBlock Grid.Column="2" Text="Quantity (PC)" VerticalAlignment="Center" TextWrapping="Wrap"></TextBlock>
-                                    <TextBlock Grid.Column="3" Grid.ColumnSpan="2" Text="Total Amount (RM)" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Right"></TextBlock>
+                                    <TextBlock Grid.Column="0" Grid.ColumnSpan="2"  Text="Denomination" VerticalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold"></TextBlock>
+                                    <TextBlock Grid.Column="2" Text="Quantity (PC)" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold"></TextBlock>
+                                    <TextBlock Grid.Column="3" Grid.ColumnSpan="2" Text="Total Amount (RM)" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Right" FontWeight="Bold"></TextBlock>
                                 </Grid>
                             </Border>
                             <Grid Grid.Row="1" Margin="0, 0, 0, 10">
@@ -204,7 +205,7 @@
             </Border>
         </Grid>
 
-        <Grid Grid.Column="1" Margin="10">
+        <Grid Grid.Column="2" Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition />
@@ -240,9 +241,9 @@
                                         <ColumnDefinition />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="Amount of Change Available :" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Right"></TextBlock>
+                                    <TextBlock Grid.Column="0" Text="Amount of Change Available :" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Right" FontWeight="Bold"></TextBlock>
                                     <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
-                                        <TextBox Text="0.00" VerticalAlignment="Center" MinWidth="120" Height="30" TextAlignment="Right" VerticalContentAlignment="Center"></TextBox>
+                                        <TextBox Text="0.00" VerticalAlignment="Center" MinWidth="80" Height="30" TextAlignment="Right" VerticalContentAlignment="Center"></TextBox>
                                         <TextBlock Text=" RM" VerticalAlignment="Center"></TextBlock>
                                     </StackPanel>
                                 </Grid>
@@ -251,7 +252,7 @@
                                         <ColumnDefinition />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="Cash Sales Amount :" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Right"></TextBlock>
+                                    <TextBlock Grid.Column="0" Text="Cash Sales Amount :" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Right" FontWeight="Bold"></TextBlock>
                                     <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
                                         <TextBlock Text="1000.00" VerticalAlignment="Center"></TextBlock>
                                         <TextBlock Text=" RM" VerticalAlignment="Center"></TextBlock>
@@ -263,7 +264,7 @@
                                             <ColumnDefinition />
                                             <ColumnDefinition />
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Text="Cash Balance :" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Right"></TextBlock>
+                                        <TextBlock Grid.Column="0" Text="Cash Balance :" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Right" FontWeight="Bold"></TextBlock>
                                         <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
                                             <TextBlock Text="1000.00" VerticalAlignment="Center"></TextBlock>
                                             <TextBlock Text=" RM" VerticalAlignment="Center"></TextBlock>
@@ -276,7 +277,7 @@
                 </Border>
             </Grid>
             <!-- -->
-            <Border Grid.Row="1" BorderBrush="#000" BorderThickness="1" CornerRadius="3" Padding="90,10,90,10">
+            <Border Grid.Row="1" BorderBrush="#000" BorderThickness="1" CornerRadius="3" Padding="50,10,50,10">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
@@ -295,21 +296,21 @@
                     <Button Grid.Column="0" Grid.Row="0" Background="Gray" Content="C" FontWeight="Bold"></Button>
                     <Button Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Background="LightGray" Content="DEL" FontWeight="Bold"></Button>
                     <!-- -->
-                    <Button Grid.Column="0" Grid.Row="1" Background="#fff" Content="7"></Button>
-                    <Button Grid.Column="1" Grid.Row="1" Background="#fff" Content="8"></Button>
-                    <Button Grid.Column="2" Grid.Row="1" Background="#fff" Content="9"></Button>
+                    <Button Grid.Column="0" Grid.Row="1" Background="#fff" Content="7" FontWeight="Bold"></Button>
+                    <Button Grid.Column="1" Grid.Row="1" Background="#fff" Content="8" FontWeight="Bold"></Button>
+                    <Button Grid.Column="2" Grid.Row="1" Background="#fff" Content="9" FontWeight="Bold"></Button>
                     <!-- -->
-                    <Button Grid.Column="0" Grid.Row="2" Background="#fff" Content="4"></Button>
-                    <Button Grid.Column="1" Grid.Row="2" Background="#fff" Content="5"></Button>
-                    <Button Grid.Column="2" Grid.Row="2" Background="#fff" Content="6"></Button>
+                    <Button Grid.Column="0" Grid.Row="2" Background="#fff" Content="4" FontWeight="Bold"></Button>
+                    <Button Grid.Column="1" Grid.Row="2" Background="#fff" Content="5" FontWeight="Bold"></Button>
+                    <Button Grid.Column="2" Grid.Row="2" Background="#fff" Content="6" FontWeight="Bold"></Button>
                     <!-- -->
-                    <Button Grid.Column="0" Grid.Row="3" Background="#fff" Content="1"></Button>
-                    <Button Grid.Column="1" Grid.Row="3" Background="#fff" Content="2"></Button>
-                    <Button Grid.Column="2" Grid.Row="3" Background="#fff" Content="3"></Button>
+                    <Button Grid.Column="0" Grid.Row="3" Background="#fff" Content="1" FontWeight="Bold"></Button>
+                    <Button Grid.Column="1" Grid.Row="3" Background="#fff" Content="2" FontWeight="Bold"></Button>
+                    <Button Grid.Column="2" Grid.Row="3" Background="#fff" Content="3" FontWeight="Bold"></Button>
                     <!-- -->
-                    <Button Grid.Column="0" Grid.Row="4" Background="#fff" Content="0"></Button>
-                    <Button Grid.Column="1" Grid.Row="4" Background="#fff" Content="00"></Button>
-                    <Button Grid.Column="2" Grid.Row="4" Background="#fff" Content="."></Button>
+                    <Button Grid.Column="0" Grid.Row="4" Background="#fff" Content="0" FontWeight="Bold"></Button>
+                    <Button Grid.Column="1" Grid.Row="4" Background="#fff" Content="00" FontWeight="Bold"></Button>
+                    <Button Grid.Column="2" Grid.Row="4" Background="#fff" Content="." FontWeight="Bold"></Button>
                 </Grid>
             </Border>
         </Grid>
