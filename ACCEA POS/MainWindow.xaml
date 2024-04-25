@@ -25,7 +25,8 @@
                 <Border Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="15">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition 
+                            <ColumnDefinition />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <!-- -->
                         <Grid.RowDefinitions>
@@ -33,7 +34,7 @@
                         </Grid.RowDefinitions>
                         <!-- -->
                         <Button Grid.Row="0" Grid.Column="0" Background="#fff" Content="Sales" Margin="10"></Button>
-                        <Button Grid.Row="0" Grid.Column="1" Background="#fff" Content="Settings" Margin="10"></Button
+                        <Button Grid.Row="0" Grid.Column="1" Background="#fff" Content="Settings" Margin="10"></Button>
                     </Grid>
                 </Border>
             </Grid>
