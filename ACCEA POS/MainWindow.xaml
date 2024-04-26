@@ -34,7 +34,7 @@
                         </Grid.RowDefinitions>
                         <!-- -->
                         <Button Grid.Row="0" Grid.Column="0" Background="#fff" Content="Sales" Margin="10"></Button>
-                        <Button Grid.Row="0" Grid.Column="1" Background="#fff" Content="Settings" Margin="10"></Button>
+                        <Button Grid.Row="0" Grid.Column="1" Background="#fff" Content="Reserve Calculation" Margin="10"></Button>
                     </Grid>
                 </Border>
             </Grid>
