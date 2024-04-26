@@ -17,8 +17,13 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
 
-            <Border BorderBrush="#000" BorderThickness="1" CornerRadius="3" Grid.Column="1">
+            <Border Grid.Row="0" BorderBrush="#000" BorderThickness="1" CornerRadius="3" Grid.Column="1" Margin="0, 0, 0, 10">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30" />
@@ -32,6 +37,7 @@
                     <Border Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0" Padding="10">
                         <Grid>
                             <Grid.RowDefinitions>
+                                <RowDefinition />
                                 <RowDefinition />
                                 <RowDefinition />
                                 <RowDefinition />
@@ -199,17 +205,33 @@
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
                             </Grid>
+                            <Border Grid.Row="11" BorderBrush="#000" BorderThickness="0, 2, 0, 0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="3" Text="Grand Total" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
+                                    <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" FontWeight="Bold"></TextBlock>
+                                </Grid>
+                            </Border>
                         </Grid>
                     </Border>
                 </Grid>
             </Border>
+
+            <Button Grid.Row="1" Width="100" HorizontalAlignment="Right">Update Amount</Button>
         </Grid>
 
         <Grid Grid.Column="2" Margin="10">
             <Grid.RowDefinitions>
-                <RowDefinition />
+                <RowDefinition Height="220" />
                 <RowDefinition Height="45" />
                 <RowDefinition />
+                <RowDefinition Height="40" />
             </Grid.RowDefinitions>
             <!-- -->
             <Grid Grid.Row="0" Margin="0, 0, 0, 10">
@@ -244,7 +266,7 @@
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="0" Text="Amount of Change Available :" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Right" FontWeight="Bold"></TextBlock>
                                     <StackPanel Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
-                                        <TextBox Text="0.00" VerticalAlignment="Center" MinWidth="80" Height="30" TextAlignment="Right" VerticalContentAlignment="Center"></TextBox>
+                                        <TextBox Text="0.00" VerticalAlignment="Center" MinWidth="150" Height="30" TextAlignment="Right" VerticalContentAlignment="Center"></TextBox>
                                         <TextBlock Text=" RM" VerticalAlignment="Center"></TextBlock>
                                     </StackPanel>
                                 </Grid>
@@ -279,7 +301,7 @@
             </Grid>
             <Button Grid.Row="1" Width="80" Margin="0, 0, 0, 10" Content="Update" HorizontalAlignment="Right"></Button>
             <!-- -->
-            <Border Grid.Row="2" BorderBrush="#000" BorderThickness="1" CornerRadius="3" Padding="50,10,50,10">
+            <Border Grid.Row="2" BorderBrush="#000" BorderThickness="1" CornerRadius="3" Padding="50, 10, 50, 10" Margin="0, 0, 0, 10">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
@@ -315,6 +337,20 @@
                     <Button Grid.Column="2" Grid.Row="4" Background="#fff" Content="." FontWeight="Bold"></Button>
                 </Grid>
             </Border>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="2" Margin="0, 0, 20, 0">
+                    <TextBlock TextWrapping="Wrap" Text="Receipt Printing"></TextBlock>
+                </Button>
+                <Button Grid.Column="3" Content="Menu"></Button>
+            </Grid>
         </Grid>
     </Grid>
+
 </Window>
