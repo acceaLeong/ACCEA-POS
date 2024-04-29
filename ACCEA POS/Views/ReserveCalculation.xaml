@@ -79,7 +79,7 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Text="100.00 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
-                                <TextBox Grid.Column="2" Text="{Binding Hundreds, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ></TextBox>
+                                <TextBox Grid.Column="2" Text="{Binding Hundreds, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" FocusManager.IsFocusScope="True"></TextBox>
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="4" Text="{Binding HundredsTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                             </Grid>
@@ -332,7 +332,7 @@
                     <Button Grid.Column="1" Grid.Row="2" Background="#fff" Content="5" FontWeight="SemiBold" FontSize="20"></Button>
                     <Button Grid.Column="2" Grid.Row="2" Background="#fff" Content="6" FontWeight="SemiBold" FontSize="20"></Button>
                     <!-- -->
-                    <Button Grid.Column="0" Grid.Row="3" Background="#fff" Content="1" FontWeight="SemiBold" FontSize="20"></Button>
+                    <Button Grid.Column="0" Grid.Row="3" Background="#fff" Content="1" FontWeight="SemiBold" FontSize="20" Command="{Binding UpdateOneClickCommand}"></Button>
                     <Button Grid.Column="1" Grid.Row="3" Background="#fff" Content="2" FontWeight="SemiBold" FontSize="20"></Button>
                     <Button Grid.Column="2" Grid.Row="3" Background="#fff" Content="3" FontWeight="SemiBold" FontSize="20"></Button>
                     <!-- -->

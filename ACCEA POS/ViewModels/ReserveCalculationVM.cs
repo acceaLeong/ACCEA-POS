@@ -1,9 +1,11 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ACCEA_POS.ViewModels;
 
@@ -130,5 +132,11 @@ public partial class ReserveCalculationVM : ObservableObject
     public Decimal FiveCentsTotal => FiveCents * 0.05M;
 
     public Decimal GrandTotal => HundredsTotal + FiftysTotal + TwentysTotal + TensTotal + FivesTotal + OnesTotal + FiftyCentsTotal + TwentyCentsTotal + TenCentsTotal + FiveCentsTotal;
+
+    [RelayCommand]
+    private void UpdateOneClick()
+    {
+        Hundreds = 1;
+    }
 }
 
