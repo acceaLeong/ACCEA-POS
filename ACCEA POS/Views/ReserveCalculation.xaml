@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ACCEA_POS.Views"
+        xmlns:vm="clr-namespace:ACCEA_POS.ViewModels"
         mc:Ignorable="d"
         Title="ReserveCalculation" Height="800" Width="1280">
+    <Window.DataContext>
+        <vm:ReserveCalculationVM />
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -75,9 +79,9 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Text="100.00 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
-                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBox>
+                                <TextBox Grid.Column="2" Text="{Binding Hundreds, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ></TextBox>
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
-                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="{Binding HundredsTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                             </Grid>
                             <Grid Grid.Row="2" Margin="0, 0, 0, 10">
                                 <Grid.ColumnDefinitions>
@@ -89,9 +93,9 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Text="50.00 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
-                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBox>
+                                <TextBox Grid.Column="2" Text="{Binding Fiftys, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ></TextBox>
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
-                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="{Binding FiftysTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                             </Grid>
                             <Grid Grid.Row="3" Margin="0, 0, 0, 10">
                                 <Grid.ColumnDefinitions>
@@ -103,9 +107,9 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Text="20.00 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
-                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBox>
+                                <TextBox Grid.Column="2" Text="{Binding Twentys, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ></TextBox>
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
-                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="{Binding TwentysTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                             </Grid>
                             <Grid Grid.Row="4" Margin="0, 0, 0, 10">
                                 <Grid.ColumnDefinitions>
@@ -117,9 +121,9 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Text="10.00 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
-                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBox>
+                                <TextBox Grid.Column="2" Text="{Binding Tens, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ></TextBox>
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
-                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="{Binding TensTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                             </Grid>
                             <Grid Grid.Row="5" Margin="0, 0, 0, 10">
                                 <Grid.ColumnDefinitions>
@@ -131,9 +135,9 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Text="5.00 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
-                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBox>
+                                <TextBox Grid.Column="2" Text="{Binding Fives, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ></TextBox>
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
-                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="{Binding FivesTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                             </Grid>
                             <Grid Grid.Row="6" Margin="0, 0, 0, 10">
                                 <Grid.ColumnDefinitions>
@@ -145,9 +149,9 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Text="1.00 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
-                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBox>
+                                <TextBox Grid.Column="2" Text="{Binding Ones, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ></TextBox>
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
-                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="{Binding OnesTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                             </Grid>
                             <Grid Grid.Row="7" Margin="0, 0, 0, 10">
                                 <Grid.ColumnDefinitions>
@@ -159,9 +163,9 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Text="0.50 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
-                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBox>
+                                <TextBox Grid.Column="2" Text="{Binding FiftyCents, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ></TextBox>
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
-                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="{Binding FiftyCentsTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                             </Grid>
                             <Grid Grid.Row="8" Margin="0, 0, 0, 10">
                                 <Grid.ColumnDefinitions>
@@ -173,9 +177,9 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Text="0.20 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
-                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBox>
+                                <TextBox Grid.Column="2" Text="{Binding TwentyCents, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ></TextBox>
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
-                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="{Binding TwentyCentsTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                             </Grid>
                             <Grid Grid.Row="9" Margin="0, 0, 0, 10">
                                 <Grid.ColumnDefinitions>
@@ -187,9 +191,9 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Text="0.10 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
-                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBox>
+                                <TextBox Grid.Column="2" Text="{Binding TenCents, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ></TextBox>
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
-                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="{Binding TenCentsTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                             </Grid>
                             <Grid Grid.Row="10" Margin="0, 0, 0, 10">
                                 <Grid.ColumnDefinitions>
@@ -201,9 +205,9 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Text="0.05 RM" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                                 <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
-                                <TextBox Grid.Column="2" Text="0" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBox>
+                                <TextBox Grid.Column="2" Text="{Binding FiveCents, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ></TextBox>
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
-                                <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="{Binding FiveCentsTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
                             </Grid>
                             <Border Grid.Row="11" BorderBrush="#000" BorderThickness="0, 2, 0, 0">
                                 <Grid>
@@ -215,7 +219,7 @@
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
                                     <TextBlock Grid.Column="3" Text="Grand Total" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
-                                    <TextBlock Grid.Column="4" Text="0.00" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" FontWeight="Bold"></TextBlock>
+                                    <TextBlock Grid.Column="4" Text="{Binding GrandTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" FontWeight="Bold"></TextBlock>
                                 </Grid>
                             </Border>
                         </Grid>
