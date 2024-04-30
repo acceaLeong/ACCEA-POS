@@ -141,40 +141,43 @@ public partial class ReserveCalculationVM : ObservableObject
     [RelayCommand]
     private void UpdateNumberInput(object obj)
     {
-        switch (selected)
+        if (obj.ToString() != ".")
         {
-            case "100":
-                Hundreds += obj.ToString();
-                break;
-            case "50":
-                Fiftys += obj.ToString();
-                break;
-            case "20":
-                Twentys += obj.ToString();
-                break;
-            case "10":
-                Tens += obj.ToString();
-                break;
-            case "5":
-                Fives += obj.ToString();
-                break;
-            case "1":
-                Ones += obj.ToString();
-                break;
-            case "0.5":
-                FiftyCents += obj.ToString();
-                break;
-            case "0.2":
-                TwentyCents += obj.ToString();
-                break;
-            case "0.1":
-                TenCents += obj.ToString();
-                break;
-            case "0.05":
-                FiveCents += obj.ToString();
-                break;
-            default:
-                break;
+            switch (selected)
+            {
+                case "100":
+                    Hundreds += obj.ToString();
+                    break;
+                case "50":
+                    Fiftys += obj.ToString();
+                    break;
+                case "20":
+                    Twentys += obj.ToString();
+                    break;
+                case "10":
+                    Tens += obj.ToString();
+                    break;
+                case "5":
+                    Fives += obj.ToString();
+                    break;
+                case "1":
+                    Ones += obj.ToString();
+                    break;
+                case "0.5":
+                    FiftyCents += obj.ToString();
+                    break;
+                case "0.2":
+                    TwentyCents += obj.ToString();
+                    break;
+                case "0.1":
+                    TenCents += obj.ToString();
+                    break;
+                case "0.05":
+                    FiveCents += obj.ToString();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
