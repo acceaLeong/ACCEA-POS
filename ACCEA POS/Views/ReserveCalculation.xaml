@@ -85,11 +85,11 @@
                                 <TextBlock Grid.Column="4" Text="{Binding HundredsTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20">
                                     <i:Interaction.Triggers>
                                         <i:EventTrigger EventName="GotFocus">
-                                            <i:InvokeCommandAction Command="{Binding GotFocusCommand}" CommandParameter="2" />
+                                            <i:InvokeCommandAction Command="{Binding GotFocusCommand}" CommandParameter="1" />
                                         </i:EventTrigger>
-                                        <i:EventTrigger EventName="LostFocus">
+                                        <!--<i:EventTrigger EventName="LostFocus">
                                             <i:InvokeCommandAction Command="{Binding LostFocusCommand}" />
-                                        </i:EventTrigger>
+                                        </i:EventTrigger>-->
                                     </i:Interaction.Triggers>
                                 </TextBlock>
                             </Grid>

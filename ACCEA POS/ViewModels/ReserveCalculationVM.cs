@@ -148,6 +148,8 @@ public partial class ReserveCalculationVM : ObservableObject
 
                 break;
             default:
+                MessageBox.Show(selected.ToString());
+
                 break;
         }
     }
@@ -155,6 +157,7 @@ public partial class ReserveCalculationVM : ObservableObject
     [RelayCommand]
     private void GotFocus(object obj)
     {
+        MessageBox.Show(obj.ToString());
         selected = Int16.Parse(obj.ToString() ?? "0");
     }
 }
