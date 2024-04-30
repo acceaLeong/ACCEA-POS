@@ -28,128 +28,152 @@ public partial class ReserveCalculationVM : ObservableObject
     
     // Fiftys
     [ObservableProperty]
-    public int _fiftys = 0;
+    public string _fiftys = "0";
 
-    partial void OnFiftysChanged(int value)
+    partial void OnFiftysChanged(string value)
     {
         OnPropertyChanged(nameof(FiftysTotal));
         OnPropertyChanged(nameof(GrandTotal));
     }
 
-    public Decimal FiftysTotal => Fiftys * 50.00M;
+    public Decimal FiftysTotal => Int32.Parse(!string.IsNullOrEmpty(Fiftys) ? Fiftys : "0") * 50.00M;
 
     // Twentys
     [ObservableProperty]
-    public int _twentys = 0;
+    public string _twentys = "0";
 
-    partial void OnTwentysChanged(int value)
+    partial void OnTwentysChanged(string value)
     {
         OnPropertyChanged(nameof(TwentysTotal));
         OnPropertyChanged(nameof(GrandTotal));
     }
 
-    public Decimal TwentysTotal => Twentys * 20.00M;
+    public Decimal TwentysTotal => Int32.Parse(!string.IsNullOrEmpty(Twentys) ? Twentys : "0") * 20.00M;
 
     // Tens
     [ObservableProperty]
-    public int _tens = 0;
+    public string _tens = "0";
 
-    partial void OnTensChanged(int value)
+    partial void OnTensChanged(string value)
     {
         OnPropertyChanged(nameof(TensTotal));
         OnPropertyChanged(nameof(GrandTotal));
     }
 
-    public Decimal TensTotal => Tens * 10.00M;
+    public Decimal TensTotal => Int32.Parse(!string.IsNullOrEmpty(Tens) ? Tens : "0") * 10.00M;
 
     // Fives
     [ObservableProperty]
-    public int _fives = 0;
+    public string _fives = "0";
 
-    partial void OnFivesChanged(int value)
+    partial void OnFivesChanged(string value)
     {
         OnPropertyChanged(nameof(FivesTotal));
         OnPropertyChanged(nameof(GrandTotal));
     }
 
-    public Decimal FivesTotal => Fives * 5.00M;
+    public Decimal FivesTotal => Int32.Parse(!string.IsNullOrEmpty(Fives) ? Fives : "0") * 5.00M;
 
     // Ones
     [ObservableProperty]
-    public int _ones = 0;
+    public string _ones = "0";
 
-    partial void OnOnesChanged(int value)
+    partial void OnOnesChanged(string value)
     {
         OnPropertyChanged(nameof(OnesTotal));
         OnPropertyChanged(nameof(GrandTotal));
     }
 
-    public Decimal OnesTotal => Ones * 1.00M;
+    public Decimal OnesTotal => Int32.Parse(!string.IsNullOrEmpty(Ones) ? Ones : "0") * 1.00M;
 
     // FiftyCents
     [ObservableProperty]
-    public int _fiftyCents = 0;
+    public string _fiftyCents = "0";
 
-    partial void OnFiftyCentsChanged(int value)
+    partial void OnFiftyCentsChanged(string value)
     {
         OnPropertyChanged(nameof(FiftyCentsTotal));
         OnPropertyChanged(nameof(GrandTotal));
     }
 
-    public Decimal FiftyCentsTotal => FiftyCents * 0.50M;
+    public Decimal FiftyCentsTotal => Int32.Parse(!string.IsNullOrEmpty(FiftyCents) ? FiftyCents : "0") * 0.50M;
 
     // TwentyCents
     [ObservableProperty]
-    public int _twentyCents = 0;
+    public string _twentyCents = "0";
 
-    partial void OnTwentyCentsChanged(int value)
+    partial void OnTwentyCentsChanged(string value)
     {
         OnPropertyChanged(nameof(TwentyCentsTotal));
         OnPropertyChanged(nameof(GrandTotal));
     }
 
-    public Decimal TwentyCentsTotal => TwentyCents * 0.20M;
+    public Decimal TwentyCentsTotal => Int32.Parse(!string.IsNullOrEmpty(TwentyCents) ? TwentyCents : "0") * 0.20M;
 
     // TenCents
     [ObservableProperty]
-    public int _tenCents = 0;
+    public string _tenCents = "0";
 
-    partial void OnTenCentsChanged(int value)
+    partial void OnTenCentsChanged(string value)
     {
         OnPropertyChanged(nameof(TenCentsTotal));
         OnPropertyChanged(nameof(GrandTotal));
     }
 
-    public Decimal TenCentsTotal => TenCents * 0.10M;
+    public Decimal TenCentsTotal => Int32.Parse(!string.IsNullOrEmpty(TenCents) ? TenCents : "0") * 0.10M;
 
     // FiveCents
     [ObservableProperty]
-    public int _fiveCents = 0;
+    public string _fiveCents = "0";
 
-    partial void OnFiveCentsChanged(int value)
+    partial void OnFiveCentsChanged(string value)
     {
         OnPropertyChanged(nameof(FiveCentsTotal));
         OnPropertyChanged(nameof(GrandTotal));
     }
 
-    public Decimal FiveCentsTotal => FiveCents * 0.05M;
+    public Decimal FiveCentsTotal => Int32.Parse(!string.IsNullOrEmpty(FiveCents) ? FiveCents : "0") * 0.05M;
 
     public Decimal GrandTotal => HundredsTotal + FiftysTotal + TwentysTotal + TensTotal + FivesTotal + OnesTotal + FiftyCentsTotal + TwentyCentsTotal + TenCentsTotal + FiveCentsTotal;
 
-    private int selected;
+    private string selected = "";
 
     [RelayCommand]
-    private void UpdateOneClick()
+    private void UpdateNumberInput(object obj)
     {
         switch (selected)
         {
-            case 1:
-                Hundreds += "1";
-
+            case "100":
+                Hundreds += obj.ToString();
+                break;
+            case "50":
+                Fiftys += obj.ToString();
+                break;
+            case "20":
+                Twentys += obj.ToString();
+                break;
+            case "10":
+                Tens += obj.ToString();
+                break;
+            case "5":
+                Fives += obj.ToString();
+                break;
+            case "1":
+                Ones += obj.ToString();
+                break;
+            case "0.5":
+                FiftyCents += obj.ToString();
+                break;
+            case "0.2":
+                TwentyCents += obj.ToString();
+                break;
+            case "0.1":
+                TenCents += obj.ToString();
+                break;
+            case "0.05":
+                FiveCents += obj.ToString();
                 break;
             default:
-                MessageBox.Show(selected.ToString());
-
                 break;
         }
     }
@@ -157,8 +181,7 @@ public partial class ReserveCalculationVM : ObservableObject
     [RelayCommand]
     private void GotFocus(object obj)
     {
-        MessageBox.Show(obj.ToString());
-        selected = Int16.Parse(obj.ToString() ?? "0");
+        selected = obj.ToString() ?? "";
     }
 }
 
