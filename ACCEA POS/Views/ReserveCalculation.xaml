@@ -412,8 +412,8 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <!-- -->
-                    <Button Grid.Column="0" Grid.Row="0" Background="Gray" Content="C" FontWeight="SemiBold" FontSize="20"></Button>
-                    <Button Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Background="LightGray" Content="DEL" FontWeight="SemiBold" FontSize="20"></Button>
+                    <Button Grid.Column="0" Grid.Row="0" Background="Gray" Content="C" FontWeight="SemiBold" FontSize="20" Command="{Binding ClearInputCommand}" CommandParameter="C"></Button>
+                    <Button Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Background="LightGray" Content="DEL" FontWeight="SemiBold" FontSize="20" Command="{Binding DeleteNumberInputCommand}" CommandParameter="DEL"></Button>
                     <!-- -->
                     <Button Grid.Column="0" Grid.Row="1" Background="#fff" Content="7" FontWeight="SemiBold" FontSize="20" Command="{Binding UpdateNumberInputCommand}" CommandParameter="7"></Button>
                     <Button Grid.Column="1" Grid.Row="1" Background="#fff" Content="8" FontWeight="SemiBold" FontSize="20" Command="{Binding UpdateNumberInputCommand}" CommandParameter="8"></Button>

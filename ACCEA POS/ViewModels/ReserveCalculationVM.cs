@@ -9,6 +9,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
+using System.Diagnostics.Metrics;
 
 namespace ACCEA_POS.ViewModels;
 
@@ -185,6 +186,132 @@ public partial class ReserveCalculationVM : ObservableObject
     private void GotFocus(object obj)
     {
         selected = obj.ToString() ?? "";
+    }
+
+    [RelayCommand]
+    private void DeleteNumberInput(object obj)
+    {
+        if (obj.ToString() != ".")
+        {
+            switch (selected)
+            {
+                case "100":
+                    if (Hundreds.Length - 1 < 0)
+                    {
+                        break;
+                    }
+                    Hundreds = Hundreds.Remove(Hundreds.Length - 1, 1);
+                    break;
+                case "50":
+                    if (Fiftys.Length - 1 < 0)
+                    {
+                        break;
+                    }
+                    Fiftys = Fiftys.Remove(Fiftys.Length - 1, 1);
+                    break;
+                case "20":
+                    if (Twentys.Length - 1 < 0)
+                    {
+                        break;
+                    }
+                    Twentys = Twentys.Remove(Twentys.Length - 1, 1);
+                    break;
+                case "10":
+                    if (Tens.Length - 1 < 0)
+                    {
+                        break;
+                    }
+                    Tens = Tens.Remove(Tens.Length - 1, 1);
+                    break;
+                case "5":
+                    if (Fives.Length - 1 < 0)
+                    {
+                        break;
+                    }
+                    Fives = Fives.Remove(Fives.Length - 1, 1);
+                    break;
+                case "1":
+                    if (Ones.Length - 1 < 0)
+                    {
+                        break;
+                    }
+                    Ones = Ones.Remove(Ones.Length - 1, 1);
+                    break;
+                case "0.5":
+                    if (FiftyCents.Length - 1 < 0)
+                    {
+                        break;
+                    }
+                    FiftyCents = FiftyCents.Remove(FiftyCents.Length - 1, 1);
+                    break;
+                case "0.2":
+                    if (TwentyCents.Length - 1 < 0)
+                    {
+                        break;
+                    }
+                    TwentyCents = TwentyCents.Remove(TwentyCents.Length - 1, 1);
+                    break;
+                case "0.1":
+                    if (TenCents.Length - 1 < 0)
+                    {
+                        break;
+                    }
+                    TenCents = TenCents.Remove(TenCents.Length - 1, 1);
+                    break;
+                case "0.05":
+                    if (FiveCents.Length - 1 < 0)
+                    {
+                        break;
+                    }
+                    FiveCents = FiveCents.Remove(FiveCents.Length - 1, 1);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    [RelayCommand]
+    private void ClearInput(object obj)
+    {
+        if (obj.ToString() != ".")
+        {
+            switch (selected)
+            {
+                case "100":
+                    Hundreds = "";
+                    break;
+                case "50":
+                    Fiftys = "";
+                    break;
+                case "20":
+                    Twentys = "";
+                    break;
+                case "10":
+                    Tens = "";
+                    break;
+                case "5":
+                    Fives = "";
+                    break;
+                case "1":
+                    Ones = "";
+                    break;
+                case "0.5":
+                    FiftyCents = "";
+                    break;
+                case "0.2":
+                    TwentyCents = "";
+                    break;
+                case "0.1":
+                    TenCents = "";
+                    break;
+                case "0.05":
+                    FiveCents = "";
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
 
