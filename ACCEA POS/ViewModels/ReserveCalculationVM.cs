@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls.Primitives;
+using System.Windows;
+using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace ACCEA_POS.ViewModels;
@@ -13,15 +16,15 @@ public partial class ReserveCalculationVM : ObservableObject
 {
     // Hundres
     [ObservableProperty]
-    public int _hundreds = 0;
+    public string _hundreds = "0";
 
-    partial void OnHundredsChanged(int value)
+    partial void OnHundredsChanged(string value)
     {
         OnPropertyChanged(nameof(HundredsTotal));
         OnPropertyChanged(nameof(GrandTotal));
     }
 
-    public Decimal HundredsTotal => Hundreds * 100.00M;
+    public Decimal HundredsTotal => Int32.Parse(!string.IsNullOrEmpty(Hundreds) ? Hundreds : "0") * 100.00M;
     
     // Fiftys
     [ObservableProperty]
@@ -133,10 +136,26 @@ public partial class ReserveCalculationVM : ObservableObject
 
     public Decimal GrandTotal => HundredsTotal + FiftysTotal + TwentysTotal + TensTotal + FivesTotal + OnesTotal + FiftyCentsTotal + TwentyCentsTotal + TenCentsTotal + FiveCentsTotal;
 
+    private int selected;
+
     [RelayCommand]
     private void UpdateOneClick()
     {
-        Hundreds = 1;
+        switch (selected)
+        {
+            case 1:
+                Hundreds += "1";
+
+                break;
+            default:
+                break;
+        }
+    }
+
+    [RelayCommand]
+    private void GotFocus(object obj)
+    {
+        selected = Int16.Parse(obj.ToString() ?? "0");
     }
 }
 

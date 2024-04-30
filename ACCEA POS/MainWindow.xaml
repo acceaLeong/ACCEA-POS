@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ACCEA_POS"
+        xmlns:vm="clr-namespace:ACCEA_POS.ViewModels"
         mc:Ignorable="d"   
         Title="MainWindow" Height="800" Width="1280">
+    <Window.DataContext>
+        <vm:ReserveCalculationVM />
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -37,7 +41,7 @@
                         <Button Grid.Row="0" Grid.Column="0" Background="#fff" Content="Sales Registration" Margin="10"></Button>
                         <Button Grid.Row="0" Grid.Column="1" Background="#fff" Content="Inspection / Settlement" Margin="10"></Button>
                         <Button Grid.Row="1" Grid.Column="0" Background="#fff" Content="Daily Account" Margin="10"></Button>
-                        <Button Grid.Row="1" Grid.Column="1" Background="#fff" Content="Reserve Calculation" Margin="10"></Button>
+                        <Button Grid.Row="1" Grid.Column="1" Background="#fff" Content="Reserve Calculation" Margin="10" Command="{Binding ReserveCalculationPageClick}"></Button>
                     </Grid>
                 </Border>
             </Grid>

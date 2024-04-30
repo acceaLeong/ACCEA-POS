@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ACCEA_POS.Views"
         xmlns:vm="clr-namespace:ACCEA_POS.ViewModels"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Title="ReserveCalculation" Height="800" Width="1280">
     <Window.DataContext>
@@ -81,7 +82,16 @@
                                 <TextBlock Grid.Column="1" Text="X" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"></TextBlock>
                                 <TextBox Grid.Column="2" Text="{Binding Hundreds, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" VerticalContentAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" FocusManager.IsFocusScope="True"></TextBox>
                                 <TextBlock Grid.Column="3" Text="⇒" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"></TextBlock>
-                                <TextBlock Grid.Column="4" Text="{Binding HundredsTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"></TextBlock>
+                                <TextBlock Grid.Column="4" Text="{Binding HundredsTotal}" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" FontSize="20">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="GotFocus">
+                                            <i:InvokeCommandAction Command="{Binding GotFocusCommand}" CommandParameter="2" />
+                                        </i:EventTrigger>
+                                        <i:EventTrigger EventName="LostFocus">
+                                            <i:InvokeCommandAction Command="{Binding LostFocusCommand}" />
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </TextBlock>
                             </Grid>
                             <Grid Grid.Row="2" Margin="0, 0, 0, 10">
                                 <Grid.ColumnDefinitions>
