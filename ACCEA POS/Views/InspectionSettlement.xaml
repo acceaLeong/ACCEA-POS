@@ -1,4 +1,4 @@
-﻿<Window x:Class="ACCEA_POS.Views.ReserveCalculation"
+﻿<Window x:Class="ACCEA_POS.Views.InspectionSettlement"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,10 +7,7 @@
         xmlns:vm="clr-namespace:ACCEA_POS.ViewModels"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-        Title="ReserveCalculation" Height="800" Width="1280">
-    <Window.DataContext>
-        <vm:ReserveCalculationVM />
-    </Window.DataContext>
+        Title="InspectionSettlement" Height="800" Width="1280">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
