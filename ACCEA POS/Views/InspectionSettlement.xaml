@@ -45,12 +45,49 @@
 
         <Grid Grid.Column="2" Margin="10">
             <Grid.RowDefinitions>
-                <RowDefinition Height="45" />
-                <RowDefinition Height="220" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="180" />
                 <RowDefinition />
                 <RowDefinition Height="40" />
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Width="80" Margin="0, 0, 0, 10" Content="Update" HorizontalAlignment="Right"></Button>
+            <Grid Grid.Row="0" Margin="0, 0, 0, 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" BorderBrush="#000" BorderThickness="1" CornerRadius="3" Margin="0, 0, 5, 0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <!-- -->
+                        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,0">
+                            <TextBlock FontWeight="Bold" VerticalAlignment="Center" Text="Closing Settlement Date" />
+                        </StackPanel>
+                        <Border Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0 " Padding="10, 0">
+                            <TextBlock FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Text="YYYY/MM/DD HH::MM" />
+                        </Border>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Column="1" BorderBrush="#000" BorderThickness="1" CornerRadius="3" Margin="5, 0, 0, 0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <!-- -->
+                        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10,0">
+                            <TextBlock FontWeight="Bold" VerticalAlignment="Center" Text="Date of Settlement" />
+                        </StackPanel>
+                        <Border Grid.Row="1" BorderBrush="#000" BorderThickness="0,1,0,0 " Padding="10, 0">
+                            <TextBlock FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Text="YYYY/MM/DD" />
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
 
             <!-- -->
             <Grid Grid.Row="1" Margin="0, 0, 0, 10">
@@ -104,7 +141,7 @@
                 </Border>
             </Grid>
             <!-- -->
-            <Border Grid.Row="2" BorderBrush="#000" BorderThickness="1" CornerRadius="3" Padding="10, 10, 50, 10" Margin="0, 0, 0, 10">
+            <Border Grid.Row="2" BorderBrush="#000" BorderThickness="1" CornerRadius="3" Padding="10" Margin="0, 0, 0, 10">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
